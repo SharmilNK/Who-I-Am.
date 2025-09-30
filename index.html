@@ -188,6 +188,21 @@
             font-size: 1em;
         }
 
+        .grey-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .grey-box:last-child {
+            margin-bottom: 0;
+        }
+
+        .grey-box p {
+            margin-bottom: 0;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -212,10 +227,6 @@
         <header>
             <h1>Sharmil N K</h1>
             <p class="subtitle">AI Explorer & Oracle ERP Cloud Consultant</p>
-            <p class="education">M.Eng. Artificial Intelligence, Duke University '26 (Expected)</p>
-            <p class="education">M.M. Management, Visveswaraya Technological University '17</p>
-            <p class="education">B.E. Electrical & Electronics Engineering, VTU '12</p>
-            <p class="location">Artificial Intelligence @ Durham, NC</p>
             <div class="contact-links">
                 <a href="mailto:sk1018@duke.edu">sk1018@duke.edu</a>
                 <a href="tel:+17149514404">+1-714-951-4404</a>
@@ -236,16 +247,35 @@
             <div class="experience-item">
                 <div class="item-title">Senior Cloud Consultant - Supply Chain Management</div>
                 <div class="item-meta">Oracle India, Bangalore • July 2017 - March 2024</div>
-                <div class="item-content">
-                    <ul>
-                        <li><strong>Project Management:</strong> Led global rollouts and offshore coordination for NAAC & APAC clients, managing cross-functional teams through end-to-end process mapping, configuration, phased testing, deployment, and post-production support</li>
-                        <li><strong>Procurement Solutions:</strong> Spearheaded global implementations for major clients (SAS, Unisys, Stuller, Arista), including data migration for purchasing and supplier management, approval workflows, and training workshops to streamline Procure-to-Pay operations</li>
-                        <li><strong>Inventory & Planning:</strong> Led Oracle Inventory and Demand Planning deployments for Cummins and Unisys, delivering scalable solutions within tight project timelines</li>
-                        <li><strong>EDI Integration:</strong> Served as functional lead for requirement mapping, design, and deployment of 13+ EDI integrations (Cummins, Scholastic), ensuring seamless Procure-to-Pay and Order Management connectivity with 100% client satisfaction</li>
-                        <li><strong>Security & Access Management:</strong> Created, tested, and validated custom roles and data access controls for SCM users across multiple implementations</li>
-                        <li><strong>HCM & Contracts:</strong> Managed HCM worker data migration and facilitated contract management solutions (Brazos County), including configuration of procurement contracts and migration of 100+ legacy contracts</li>
-                        <li><strong>Reporting & Analytics:</strong> Developed custom reports using OTBI, BI Publisher, and reporting templates; performed data reconciliation and validation</li>
-                    </ul>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <p style="color: #555; font-size: 0.9em;">Led global rollouts and offshore coordination for NAAC & APAC clients, managing cross-functional teams through end-to-end process mapping, configuration, phased testing, deployment, and post-production support</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Procurement Solutions</h3>
+                        <p style="color: #555; font-size: 0.9em;">Spearheaded global implementations for major clients (SAS, Unisys, Stuller, Arista), including data migration for purchasing and supplier management, approval workflows, and training workshops to streamline Procure-to-Pay operations</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Inventory & Planning</h3>
+                        <p style="color: #555; font-size: 0.9em;">Led Oracle Inventory and Demand Planning deployments for Cummins and Unisys, delivering scalable solutions within tight project timelines</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>EDI Integration</h3>
+                        <p style="color: #555; font-size: 0.9em;">Served as functional lead for requirement mapping, design, and deployment of 13+ EDI integrations (Cummins, Scholastic), ensuring seamless Procure-to-Pay and Order Management connectivity with 100% client satisfaction</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Security & Access Management</h3>
+                        <p style="color: #555; font-size: 0.9em;">Created, tested, and validated custom roles and data access controls for SCM users across multiple implementations</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>HCM & Contracts</h3>
+                        <p style="color: #555; font-size: 0.9em;">Managed HCM worker data migration and facilitated contract management solutions (Brazos County), including configuration of procurement contracts and migration of 100+ legacy contracts</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Reporting & Analytics</h3>
+                        <p style="color: #555; font-size: 0.9em;">Developed custom reports using OTBI, BI Publisher, and reporting templates; performed data reconciliation and validation</p>
+                    </div>
                 </div>
             </div>
 
@@ -253,7 +283,9 @@
                 <div class="item-title">Software Developer</div>
                 <div class="item-meta">Tata Consultancy Services, Bangalore • December 2012 - May 2015</div>
                 <div class="item-content">
-                    <p>Configured, implemented, and deployed Smart Stream TLM for financial banking reconciliations, ensuring accurate transaction matching and reporting for banking clients.</p>
+                    <div class="grey-box">
+                        <p>Configured, implemented, and deployed Smart Stream TLM for financial banking reconciliations, ensuring accurate transaction matching and reporting for banking clients.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -261,24 +293,30 @@
         <div class="section">
             <h2>Academic Projects</h2>
             <p style="margin-bottom: 20px;">Current projects at Duke University's AI for Product Innovation program:</p>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="skills-grid">
+                <div class="skill-category">
                     <h3>Using Alternative Data</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
-                <div class="project-card">
+                <div class="skill-category">
                     <h3>Data Storytelling</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
-                <div class="project-card">
+                <div class="skill-category">
                     <h3>Explainable AI (XAI)</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
-                <div class="project-card">
+                <div class="skill-category">
                     <h3>Modeling Weather Patterns</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
-                <div class="project-card">
+                <div class="skill-category">
                     <h3>LLM Hackathon</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
-                <div class="project-card">
+                <div class="skill-category">
                     <h3>Open Source Contributions</h3>
+                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
                 </div>
             </div>
         </div>
@@ -332,7 +370,9 @@
                 <div class="item-title">Master of Engineering in AI for Product Innovation</div>
                 <div class="item-meta">Duke University, Pratt School of Engineering • August 2025 - Present</div>
                 <div class="item-content">
-                    <p><strong>Coursework:</strong> Modeling Processes and Algorithms, Sourcing Data for Analytics, Alternative Data, Explainable AI, Management in High Tech Industries</p>
+                    <div class="grey-box">
+                        <p><strong>Coursework:</strong> Modeling Processes and Algorithms, Sourcing Data for Analytics, Alternative Data, Explainable AI, Management in High Tech Industries</p>
+                    </div>
                 </div>
             </div>
 
@@ -340,32 +380,41 @@
                 <div class="item-title">Master of Management</div>
                 <div class="item-meta">Visveswaraya Technological University, BNMIT, Bangalore • June 2015 - May 2017</div>
                 <div class="item-content">
-                    <p>GPA: 6.7</p>
+                    <div class="grey-box">
+                        <p>GPA: 6.7</p>
+                    </div>
                 </div>
             </div>
 
             <div class="experience-item">
                 <div class="item-title">Bachelor of Engineering - Electrical & Electronics Engineering</div>
                 <div class="item-meta">Visveswaraya Technological University, BNMIT, Bangalore • June 2008 - May 2012</div>
+                <div class="item-content">
+                    <div class="grey-box">
+                        <p>Focused on electrical and electronics engineering fundamentals</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2>Community & Extracurricular</h2>
-            <div class="experience-item">
-                <div class="item-title">Published Author</div>
-                <div class="item-meta">2024</div>
-                <p>Published independent poetry collection 'The Gray In Me' (2024)</p>
-            </div>
-            <div class="experience-item">
-                <div class="item-title">CERT Certified Volunteer</div>
-                <div class="item-meta">City of Huntington Beach, CA</div>
-                <p>Community Emergency Response Team certified volunteer, trained in disaster preparedness and emergency response</p>
-            </div>
-            <div class="experience-item">
-                <div class="item-title">Community Service</div>
-                <div class="item-meta">Various Organizations</div>
-                <p>Online Tutor at Tutoring Chicago | Birmingham High School Mock Interviewer</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Published Author</h3>
+                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">2024</p>
+                    <p style="color: #555; font-size: 0.9em;">Published independent poetry collection 'The Gray In Me' (2024)</p>
+                </div>
+                <div class="skill-category">
+                    <h3>CERT Certified Volunteer</h3>
+                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">City of Huntington Beach, CA</p>
+                    <p style="color: #555; font-size: 0.9em;">Community Emergency Response Team certified volunteer, trained in disaster preparedness and emergency response</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Community Service</h3>
+                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">Various Organizations</p>
+                    <p style="color: #555; font-size: 0.9em;">Online Tutor at Tutoring Chicago | Birmingham High School Mock Interviewer</p>
+                </div>
             </div>
         </div>
     </div>
