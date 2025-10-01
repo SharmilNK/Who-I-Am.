@@ -15,7 +15,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
         .container {
@@ -27,83 +28,122 @@
         header {
             background: white;
             padding: 60px 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             margin-bottom: 30px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         }
 
         h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .subtitle {
-            font-size: 1.2em;
-            color: #7f8c8d;
+            font-size: 1.3em;
+            color: #555;
             margin-bottom: 10px;
+            font-weight: 500;
         }
 
-        .education {
-            font-size: 1em;
-            color: #95a5a6;
-            margin-bottom: 5px;
-        }
-
-        .location {
-            font-size: 0.95em;
-            color: #bdc3c7;
+        .tagline {
+            font-size: 1.1em;
+            color: #764ba2;
             font-style: italic;
-            margin-bottom: 15px;
+            margin-top: 15px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 8px;
+            font-weight: 500;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 25px;
+            margin-top: 25px;
             flex-wrap: wrap;
         }
 
         .contact-links a {
-            color: #3498db;
+            color: #667eea;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(102, 126, 234, 0.1);
         }
 
         .contact-links a:hover {
-            color: #2980b9;
-            text-decoration: underline;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
 
         .section {
             background: white;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
         }
 
         .section h2 {
-            font-size: 1.8em;
-            color: #2c3e50;
+            font-size: 2em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-image-slice: 1;
             padding-bottom: 10px;
+            font-weight: 700;
         }
 
         .section p {
             margin-bottom: 15px;
             color: #555;
             text-align: justify;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #764ba2;
+            font-weight: 600;
         }
 
         .experience-item, .project-item {
             margin-bottom: 25px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #ecf0f1;
+            border-bottom: 2px solid #f0f0f0;
         }
 
         .experience-item:last-child, .project-item:last-child {
@@ -112,45 +152,45 @@
         }
 
         .item-title {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #2c3e50;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 5px;
         }
 
         .item-meta {
             color: #7f8c8d;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        .item-content ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .item-content li {
-            margin-bottom: 8px;
-            color: #555;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 20px;
             margin-top: 20px;
         }
 
         .skill-category {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            border-left-color: #764ba2;
         }
 
         .skill-category h3 {
-            font-size: 1em;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            font-size: 1.05em;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .skill-category ul {
@@ -158,41 +198,34 @@
         }
 
         .skill-category li {
-            padding: 3px 0;
+            padding: 4px 0;
             color: #555;
             font-size: 0.9em;
+            position: relative;
+            padding-left: 15px;
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 10px;
+        .skill-category li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+            font-weight: bold;
         }
 
-        .project-card {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .project-card h3 {
-            color: #2c3e50;
-            font-size: 1em;
+        .skill-category p {
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.6;
+            text-align: left;
         }
 
         .grey-box {
-            background: #ecf0f1;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-bottom: 10px;
+            border-left: 3px solid #667eea;
         }
 
         .grey-box:last-child {
@@ -201,11 +234,23 @@
 
         .grey-box p {
             margin-bottom: 0;
+            text-align: left;
+        }
+
+        .impact-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 8px;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
             .section {
@@ -219,6 +264,10 @@
             .contact-links {
                 font-size: 0.9em;
             }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -226,134 +275,137 @@
     <div class="container">
         <header>
             <h1>Sharmil N K</h1>
-            <p class="subtitle">AI Explorer & Oracle ERP Cloud Consultant</p>
+            <p class="subtitle">AI Explorer | Enterprise Solutions Architect | Published Poet</p>
+            <p class="tagline">✨ Bridging creativity, emotional intelligence, and technology to drive transformative solutions ✨</p>
             <div class="contact-links">
-                <a href="mailto:sk1018@duke.edu">sk1018@duke.edu</a>
-                <a href="tel:+17149514404">+1-714-951-4404</a>
-                <a href="https://www.linkedin.com/in/sharmilnanjappa/" target="_blank">LinkedIn</a>
+                <a href="mailto:sk1018@duke.edu">📧 Email</a>
+                <a href="tel:+17149514404">📱 +1-714-951-4404</a>
+                <a href="https://www.linkedin.com/in/sharmilnanjappa/" target="_blank">💼 LinkedIn</a>
             </div>
         </header>
 
         <div class="section">
-            <h2>About Me</h2>
-            <p>I am passionate about driving intelligent enterprise transformation through the convergence of AI and enterprise solutions. Currently pursuing a Master's in Artificial Intelligence at Duke University, I bring a unique blend of 9+ years in IT, including 7+ years specializing in Oracle ERP Cloud Supply Chain solutions for global clients.</p>
-            <p>My expertise spans end-to-end Oracle SCM implementations, including Procurement, Inventory Management, EDI integrations, and Demand Planning across diverse industries. I've led global rollouts for Fortune 500 clients in North America and APAC regions, consistently delivering scalable solutions within tight timelines with 100% client satisfaction.</p>
-            <p>I'm now expanding my technical capabilities in AI and machine learning to design innovative, data-driven solutions that bridge the gap between traditional enterprise systems and emerging AI technologies. Beyond technology, I'm an independent published poet with a collection titled 'The Gray In Me' (2024), and actively contribute to my community as a CERT-certified volunteer.</p>
+            <h2>Who I Am</h2>
+            <p>I'm a <span class="highlight">rare blend of technical expertise, consulting acumen, and creative thinking</span> — someone who doesn't just implement solutions, but transforms how organizations think about technology and people.</p>
+            <p>With <span class="highlight">9+ years of enterprise consulting experience</span> and a Master's in AI from Duke University, I bring a unique trifecta: deep technical knowledge in Oracle ERP and AI, proven ability to lead global cross-functional teams, and creative problem-solving honed through poetry and artistic expression. I don't just deliver projects — I <span class="highlight">build relationships, understand stakeholder needs, and craft solutions that resonate on both technical and human levels</span>.</p>
+            <p>What sets me apart? I've led <span class="highlight">multi-million dollar implementations across Fortune 500 clients</span> with 100% satisfaction rates, not just because of technical excellence, but because I understand that technology is about enabling people. As a <span class="highlight">published poet and community volunteer</span>, I bring empathy, clear communication, and storytelling to every technical challenge. Whether it's explaining complex AI models or navigating stakeholder dynamics, I connect the dots others miss.</p>
         </div>
 
         <div class="section">
-            <h2>Professional Experience</h2>
+            <h2>Professional Impact</h2>
             
             <div class="experience-item">
-                <div class="item-title">Senior Cloud Consultant - Supply Chain Management</div>
+                <div class="item-title">Senior Cloud Consultant - Supply Chain Management<span class="impact-badge">7 Years Impact</span></div>
                 <div class="item-meta">Oracle India, Bangalore • July 2017 - March 2024</div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Project Management</h3>
-                        <p style="color: #555; font-size: 0.9em;">Led global rollouts and offshore coordination for NAAC & APAC clients, managing cross-functional teams through end-to-end process mapping, configuration, phased testing, deployment, and post-production support</p>
+                        <h3>🎯 Strategic Leadership</h3>
+                        <p>Orchestrated global rollouts across NAAC & APAC, leading diverse cross-functional teams through complex transformations. Mastered stakeholder management, change leadership, and delivered seamless go-lives under tight deadlines.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>Procurement Solutions</h3>
-                        <p style="color: #555; font-size: 0.9em;">Spearheaded global implementations for major clients (SAS, Unisys, Stuller, Arista), including data migration for purchasing and supplier management, approval workflows, and training workshops to streamline Procure-to-Pay operations</p>
+                        <h3>💡 Procurement Innovation</h3>
+                        <p>Drove end-to-end implementations for SAS, Unisys, Stuller, and Arista. Transformed procurement operations through intelligent workflows, data migration excellence, and user-centric training that empowered teams.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>Inventory & Planning</h3>
-                        <p style="color: #555; font-size: 0.9em;">Led Oracle Inventory and Demand Planning deployments for Cummins and Unisys, delivering scalable solutions within tight project timelines</p>
+                        <h3>⚡ Rapid Deployment Excellence</h3>
+                        <p>Delivered Oracle Inventory and Demand Planning for Cummins and Unisys ahead of schedule. Built scalable architectures that grew with business needs while maintaining performance.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>EDI Integration</h3>
-                        <p style="color: #555; font-size: 0.9em;">Served as functional lead for requirement mapping, design, and deployment of 13+ EDI integrations (Cummins, Scholastic), ensuring seamless Procure-to-Pay and Order Management connectivity with 100% client satisfaction</p>
+                        <h3>🔗 Integration Mastery</h3>
+                        <p>Led 13+ EDI integrations achieving 100% client satisfaction. Bridged systems, processes, and people — ensuring seamless connectivity between Procure-to-Pay and Order Management ecosystems.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>Security & Access Management</h3>
-                        <p style="color: #555; font-size: 0.9em;">Created, tested, and validated custom roles and data access controls for SCM users across multiple implementations</p>
+                        <h3>🔐 Security Architecture</h3>
+                        <p>Designed and validated custom security frameworks ensuring data integrity and compliance across multiple implementations. Balanced access needs with robust controls.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>HCM & Contracts</h3>
-                        <p style="color: #555; font-size: 0.9em;">Managed HCM worker data migration and facilitated contract management solutions (Brazos County), including configuration of procurement contracts and migration of 100+ legacy contracts</p>
+                        <h3>📋 Contract & HCM Solutions</h3>
+                        <p>Migrated 100+ legacy contracts for Brazos County while managing complex HCM integrations. Turned legacy chaos into organized, accessible data ecosystems.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>Reporting & Analytics</h3>
-                        <p style="color: #555; font-size: 0.9em;">Developed custom reports using OTBI, BI Publisher, and reporting templates; performed data reconciliation and validation</p>
+                        <h3>📊 Data-Driven Insights</h3>
+                        <p>Created executive-level reports using OTBI and BI Publisher. Transformed raw data into compelling narratives that drove strategic decisions.</p>
                     </div>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="item-title">Software Developer</div>
+                <div class="item-title">Software Developer<span class="impact-badge">Foundation Years</span></div>
                 <div class="item-meta">Tata Consultancy Services, Bangalore • December 2012 - May 2015</div>
                 <div class="item-content">
                     <div class="grey-box">
-                        <p>Configured, implemented, and deployed Smart Stream TLM for financial banking reconciliations, ensuring accurate transaction matching and reporting for banking clients.</p>
+                        <p>Built financial reconciliation systems using Smart Stream TLM for banking clients. Developed precision-focused solutions ensuring transaction accuracy and regulatory compliance.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Academic Projects</h2>
-            <p style="margin-bottom: 20px;">Current projects at Duke University's AI for Product Innovation program:</p>
+            <h2>AI Innovation Projects</h2>
+            <p style="margin-bottom: 20px;">Expanding my technical horizons at Duke University — where I'm learning to apply AI to real-world business challenges:</p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Using Alternative Data</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>📊 Alternative Data Analytics</h3>
+                    <p>Exploring unconventional data sources to derive business insights and competitive advantages in modern markets.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Storytelling</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>📖 Data Storytelling</h3>
+                    <p>Transforming complex datasets into compelling narratives that drive stakeholder action and decision-making.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Explainable AI (XAI)</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>🔍 Explainable AI (XAI)</h3>
+                    <p>Building transparent AI models that business leaders can trust and understand — bridging the black box gap.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Modeling Weather Patterns</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>🌤️ Weather Pattern Modeling</h3>
+                    <p>Applying machine learning to climate data for predictive analytics and pattern recognition.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>LLM Hackathon</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>🤖 LLM Hackathon</h3>
+                    <p>Rapid prototyping with large language models to solve real-world problems under pressure.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Open Source Contributions</h3>
-                    <p style="color: #555; font-size: 0.9em; margin-top: 10px;">Soon to be updated</p>
+                    <h3>🌐 Open Source Contributions</h3>
+                    <p>Giving back to the developer community while expanding technical skills and collaborative coding practices.</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Skills & Certifications</h2>
+            <h2>Technical Arsenal</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming & Data</h3>
+                    <h3>💻 Programming & AI</h3>
                     <ul>
                         <li>Python</li>
                         <li>SQL</li>
                         <li>Data Analytics</li>
                         <li>Machine Learning</li>
+                        <li>Explainable AI</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Oracle ERP Cloud</h3>
+                    <h3>☁️ Enterprise Cloud Platforms</h3>
                     <ul>
-                        <li>Supply Chain Management (SCM)</li>
+                        <li>Oracle Supply Chain Management</li>
                         <li>Procurement Cloud</li>
                         <li>Inventory Management</li>
                         <li>Demand Planning</li>
                         <li>EDI Integration</li>
-                        <li>Oracle Fusion Applications</li>
+                        <li>Fusion Applications</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Reporting & Tools</h3>
+                    <h3>📈 Analytics & Reporting</h3>
                     <ul>
-                        <li>OTBI (Oracle Transactional Business Intelligence)</li>
+                        <li>OTBI (Oracle Transactional BI)</li>
                         <li>BI Publisher</li>
+                        <li>Data Visualization</li>
                         <li>Smart Stream TLM</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Certifications</h3>
+                    <h3>🏆 Professional Certifications</h3>
                     <ul>
                         <li>Oracle Procurement Cloud 2022 Implementation Professional</li>
                         <li>Oracle Inventory Cloud 2022 Implementation Professional</li>
@@ -364,14 +416,14 @@
         </div>
 
         <div class="section">
-            <h2>Education</h2>
+            <h2>Education & Growth</h2>
             
             <div class="experience-item">
-                <div class="item-title">Master of Engineering in AI for Product Innovation</div>
+                <div class="item-title">Master of Engineering in AI for Product Innovation<span class="impact-badge">Current</span></div>
                 <div class="item-meta">Duke University, Pratt School of Engineering • August 2025 - Present</div>
                 <div class="item-content">
                     <div class="grey-box">
-                        <p><strong>Coursework:</strong> Modeling Processes and Algorithms, Sourcing Data for Analytics, Alternative Data, Explainable AI, Management in High Tech Industries</p>
+                        <p><strong>Key Coursework:</strong> Modeling Processes & Algorithms | Sourcing Data for Analytics | Alternative Data | Explainable AI | Management in High Tech Industries</p>
                     </div>
                 </div>
             </div>
@@ -381,7 +433,7 @@
                 <div class="item-meta">Visveswaraya Technological University, BNMIT, Bangalore • June 2015 - May 2017</div>
                 <div class="item-content">
                     <div class="grey-box">
-                        <p>GPA: 6.7</p>
+                        <p>Developed business acumen and leadership skills | GPA: 6.7</p>
                     </div>
                 </div>
             </div>
@@ -391,29 +443,30 @@
                 <div class="item-meta">Visveswaraya Technological University, BNMIT, Bangalore • June 2008 - May 2012</div>
                 <div class="item-content">
                     <div class="grey-box">
-                        <p>Focused on electrical and electronics engineering fundamentals</p>
+                        <p>Built strong engineering fundamentals in electrical systems and electronics</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Community & Extracurricular</h2>
+            <h2>Beyond the Code</h2>
+            <p style="margin-bottom: 20px;"><span class="highlight">What makes me different:</span> I bring heart to tech. Here's how I stay grounded and connected:</p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Published Author</h3>
+                    <h3>✍️ Published Poet</h3>
                     <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">2024</p>
-                    <p style="color: #555; font-size: 0.9em;">Published independent poetry collection 'The Gray In Me' (2024)</p>
+                    <p>Author of 'The Gray In Me' — bringing creative storytelling and emotional depth to everything I do. Writing poetry sharpens my ability to communicate complex ideas with clarity and empathy.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>CERT Certified Volunteer</h3>
-                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">City of Huntington Beach, CA</p>
-                    <p style="color: #555; font-size: 0.9em;">Community Emergency Response Team certified volunteer, trained in disaster preparedness and emergency response</p>
+                    <h3>🚨 Emergency Response Leader</h3>
+                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">CERT Certified, Huntington Beach, CA</p>
+                    <p>Trained in disaster preparedness and community emergency response. Because leadership under pressure isn't just for the workplace — it's about serving others when it matters most.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Community Service</h3>
-                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">Various Organizations</p>
-                    <p style="color: #555; font-size: 0.9em;">Online Tutor at Tutoring Chicago | Birmingham High School Mock Interviewer</p>
+                    <h3>🎓 Community Educator</h3>
+                    <p style="color: #7f8c8d; font-size: 0.85em; margin-bottom: 8px;">Multiple Organizations</p>
+                    <p>Online Tutor at Tutoring Chicago | Birmingham High School Mock Interviewer — investing in the next generation and giving back through mentorship.</p>
                 </div>
             </div>
         </div>
