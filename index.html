@@ -345,43 +345,73 @@
 
         <div class="section">
             <h2>AI Innovation Projects</h2>
-            <p style="margin-bottom: 20px;">Expanding my technical horizons at Duke University — where I'm learning to apply AI to real-world business challenges:</p>
+            <p style="margin-bottom: 20px;">Expanding my technical horizons at Duke University where I'm learning to apply AI to real-world business challenges:</p>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Research Assistant </h3>
                     <p>Duke Trust Lab × OpenAI Deep Tech Initiative </p>
-                    <p>Develop a computer vision framework integrated with video meetings to automate facial micro-expression detection and identify user engagement and speaking cues.</p>
+                    <p>A multi-agent collaboration platform that transforms research meeting transcripts (pasted text, uploaded audio/video, or live recordings) into structured action plans with goals, decisions, next steps, assumptions, perspectives, flagged gaps, and glossary terms. Implemented secure Google OAuth login, role-based project permissions (admin/editor/viewer), persisted task status and notes, normalized + JSON plan storage in Supabase, and invite-link onboarding so collaborators can join projects and work in a shared planning workflow.</p>
+                    <p>Tools : OpenAI Whisper + GPT-based agent pipeline (Python), FastAPI + Uvicorn, Supabase (Postgres, Auth, RLS, SQL migrations), React + Vite, Supabase JS, React Router, Pydantic, Tailwind CSS, Python, JavaScript</p>
+                </div>
+                 <div class="skill-category">
+                    <h3>Gesture Globe Trotter</h3>
+                    <p>A gesture-controlled 3D globe interface for interactive travel planning</p>
+                    <p>The project enables users to navigate a virtual globe and select travel destinations entirely through hand gestures captured via webcam. An Agent then plans the trip through API integrations.</p>
+                     <p> Tools : Webcam-based hand tracking / gesture recognition, 3D globe interface, Trip-planning API integrations</p>
                 </div>
                 <div class="skill-category">
                     <h3>Evaluation and Observability </h3>
-                    <p>Capstone Project with Vitelis </p>
-                    <p>Building an evaluation framework using LangGraph, ChromaDB and OpenAI to automate web data extraction via Firecrawl, KPI-driven RAG analysis, and structured YAML reporting.</p>
+                    <p>Capstone Project</p>
+                    <p>RAG evaluation system built to assess the AI maturity of 5 telecom companies against a structured KPI framework. The system crawls company websites, scores each KPI using an LLM-based pipeline, and produces calibrated confidence scores.</p>
+                    <p>Tools : LangGraph, ChromaDB, sentence-transformers, BM25 + dense hybrid retrieval, OpenAI API, MLflow, Langfuse, Python, YAML</p>
+                </div>
+                 <div class="skill-category">
+                    <h3>Tidy Up</h3>
+                    <p>A gamified household accountability app where players photograph messy areas of their home and the app automatically identifies misplaced objects, determines who is responsible, and sends a personalized push notification for cleaning up. </p>
+                    <p>Live at: https://tidyup-zp3v.onrender.com </p>
+                    <p>Tools : MobileNetV3-Large, CLIP, Claude API, Firebase Cloud Messaging, FastAPI + Uvicorn, SQLAlchemy + PostgreSQL, Render</p>
                 </div>
                 <div class="skill-category">
                     <h3>Alternative Data Analytics for NYC Hospitalization Forecasting</h3>
-                    <p>Leveraged environmental indicators as unconventional data sources to predict hospitalizations for respiratory distress 3 days ahead, demonstrating how alternative data can unlock actionable insights in healthcare</p>
+                    <p>Leveraged environmental indicators (air pollution, weather patterns and seasonality) as unconventional data sources to predict hospitalizations for respiratory distress 3 days ahead, building a time-stratified regression model with lagged pollution and weather features.</p>
+                    <p>Tool : Gradient Boosting Regressor, Random Forest, Lasso, Ridge Regression, OpenAQ, EPA, NOAA, NYC DOHMH, pandas, scikit-learn, matplotlib, Python</p>
                 </div>
                 <div class="skill-category">
                     <h3>Nomad</h3>
                     <p>Duke AI Hackathon 2025 : Winner Robotics Track</p>
-                    <p>A multi-modal embedded memory-augmented voice + vision car assistant onboard Raspberry Pi intelligence that acts as your personal tour guide while you drive.</p>
-                    
+                    <p>An AI voice-activated road trip companion built on a Raspberry Pi. A background thread continuously fetches images from the Pi's camera and uses GPT-4o Vision to detect location signs, landmarks, and points of interest, storing observations as vector embeddings in a persistent ChromaDB memory store. A foreground voice loop listens for the wake word "Nomad," transcribes the user's question, retrieves relevant memories via semantic search, and generates a conversational travel guide response with GPT-4o-mini. Responses are synthesized to audio via TTS and played back through the Pi</p>
+                    <p>Tools : OpenAI GPT-4o, OpenAI GPT-4o-mini, OpenAI TTS, ChromaDB, sentence-transformers, SpeechRecognition + Google Speech API, YOLOv8 / ultralytics, EasyOCR, Raspberry Pi</p>
                     <a href="https://devpost.com/software/nomad-tu59q1" target="_blank">DevPost Link</a>
                     <a href="https://ai.invideo.io/workspace/72d502cf-afed-45d6-bc75-95cb6f20b1b6/v40-copilot/1bfe76a3-000e-429f-b97f-054b74027a83" target="_blank">Video Introduction</a>
                 </div>
                 <div class="skill-category">
                     <h3>Explainability-Guided Model Routing</h3>
-                    <p>An XAI-driven system that routes inputs to the smallest sufficient model, improving interpretability while reducing compute and energy use.</p>
-                    
+                    <p>An XAI-driven system that analyzes images, interprets and predicts input difficulty to route it to the most efficient model capable of handling while reducing compute and energy use.</p>
+                    <p>Tools : Explainable AI (XAI) techniques (SHAP / saliency-based signals), Multi-model routing architecture (small vs. large models), Python</p>
                     <a href="https://sharmilnk.github.io/Reduce-Compute-and-Latency-using-XAI" target="_blank">Demo</a>
                 </div>
                 <div class="skill-category">
                     <h3>Weather Pattern Modeling</h3>
                     <p>Developed time series models to predict hourly temperature at RDU airport, applying machine learning techniques to climate data for accurate predictive analytics and pattern recognition.</p>
+                    <p>Tools : Meteostat API, Random Forest Regressor, Linear, Ridge, and Lasso Regression, f-regression feature selection, scikit-learn, pandas, matplotlib, Jupyter Notebook, Python</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Credit Risk Monitoring</h3>
-                    <p>Designed a credit risk model that predicts 30-day repayment for first-time borrowers, enabling data-driven underwriting decisions using pre-loan behavioral signals.</p>
+                    <h3>Kaggle Competition — Philharmonia Orchestra</h3>
+                    <p>A full ML pipeline built for a Kaggle competition predicting which past patrons are most likely to purchase a 2014–15 Philharmonia Orchestra season subscription. The pipeline covers data cleaning, zipcode demographic enrichment, subscription and ticket purchase feature engineering, and an ensemble model evaluated through 5-fold stratified cross-validation achieving strong AUROC performance.</p>
+                    <p>Tools : LightGBM (gradient boosted trees), Ridge Regression (ensemble), 5-fold stratified cross-validation, pandas, NumPy, scikit-learn, Python</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>StudyLens</h3>
+                    <p>An AI-powered lecture review platform that consolidates slides, transcripts, and lecture notes into structured summaries with RAG-based Q&A. The project benchmarked 8 summarization architectures across 10 lecture topics, with Qwen2.5-7B outperforming all encoder-decoder models. A QLoRA fine-tuned version was also trained on lecture-specific data with only 0.13% of parameters updated.</p>
+                    <p>Tools : Qwen2.5-7B (instruction-tuned LLM, 128K context), QLoRA (4-bit quantization + LoRA rank-16 fine-tuning), BART-CNN, Long-T5, BART-SAMSum, LED-arXiv, Claude API / Anthropic, HuggingFace Transformers, PEFT, ROUGE-L, BERTScore, NLI factual consistency, TF-IDF, Google Colab (A100 GPU), Python</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>ClickLens</h3>
+                    <p>A computer vision tool that predicts which YouTube thumbnail will generate the most clicks. Users upload 2–4 candidate thumbnails and receive ranked predictions with Grad-CAM explainability heatmaps highlighting which visual regions drive click-through rate. A kNN recommender using EfficientNet-B0 embeddings was also built for similarity-based thumbnail suggestions.</p>
+                    <p>Tools : EfficientNet-B0 (PyTorch / timm, fine-tuned), XGBoost, Grad-CAM (visual explainability), sklearn NearestNeighbors (cosine kNN recommender), YouTube Data API v3, FastAPI + Uvicorn, React + Vite, Render, Python</p>
+                    <a href="https://clicklens-6x9m.onrender.com" target="_blank">Demo</a>
                 </div>
                 <div class="skill-category">
                     <h3>Data Storytelling</h3>
@@ -401,8 +431,10 @@
                         <li>Python</li>
                         <li>Machine Learning</li>
                         <li>Deep Learning</li>
+                        <li>Computer Vision & NLP</li>
                         <li>Generative AI & Recommendations</li>
                         <li>LLM & Intelligent Agents</li>
+                        <li>Explainable AI</li>
                         <li>Reinforcement Learning</li>
                     </ul>
                 </div>
